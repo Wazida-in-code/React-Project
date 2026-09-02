@@ -1,0 +1,7 @@
+.country{
+    border: 2px solid rgb(114, 94, 69);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: aliceblue;
+}

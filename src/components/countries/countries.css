@@ -1,0 +1,25 @@
+.countries{
+    border: 2px solid purple;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    line-height: 5px;
+}
+
+.countries img{
+    width: 200px;
+}
+
+.country-visited-btn{
+    background-color: rgb(7, 156, 7);
+}
+
+.country-not-visited{
+    background-color: rgb(109, 109, 189);
+}
+
+.country-visited{
+    border: 5px solid rgb(43, 173, 43);
+}
