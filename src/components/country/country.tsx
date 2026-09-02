@@ -4,13 +4,17 @@ import './country.css'
 
 export interface CountryProps{
     country: countryType
+    handleVisitedCountry: (country: countryType) => void
+    handleVisitedFlag: (flag: string) => void
 }
 
-export default function Country({ country }: CountryProps){
+export default function Country({ country, handleVisitedCountry, handleVisitedFlag }: CountryProps){
 
-    const [visited, setVisited] = useState<boolean>(false)
+    const [visited, setVisited] = useState<boolean>(false);
+
     const handleVisit = () => {
         setVisited(!visited)
+        handleVisitedCountry(country);
     }
 
     return(
@@ -22,6 +26,9 @@ export default function Country({ country }: CountryProps){
             <button onClick={handleVisit} className={`country ${visited? 'country-visited-btn' : 'country-not-visited'}`}>
                 {visited? "Visited" : "Mark as visited"}
             </button>
+            <button
+            onClick={() => handleVisitedFlag(country.flags.flags.png)}
+            >Add flag as visited</button>
         </div>
     )
 }

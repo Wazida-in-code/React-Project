@@ -23,3 +23,7 @@
 .country-visited{
     border: 5px solid rgb(43, 173, 43);
 }
+
+.visited-flegs img{
+    width: 50px;
+}
