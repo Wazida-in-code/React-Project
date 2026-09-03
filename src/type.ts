@@ -21,4 +21,18 @@ export interface countryType {
     population: {
         population: number
     }
+
+    area:{
+        area: number
+    }
+
+    region:{
+        region: string
+    }
+
 }
+
+
+// "region": {
+//         "region": "Americas"
+//       },

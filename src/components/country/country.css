@@ -5,3 +5,14 @@
     padding: 10px;
     background-color: aliceblue;
 }
+
+.flag-btn{
+    background-color: lavenderblush;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid rgb(84, 8, 84);
+}
+
+.visited-flag-btn{
+    border: 5px solid rgb(43, 173, 43);
+}

@@ -64,6 +64,12 @@ export default function Countries({ countriesPromise } : countriesProps){
                 }
             </div>
 
+            <div>
+                {
+                    
+                }
+            </div>
+
             <div className='countries'>
                 {
                 countries.map(country => <Country 

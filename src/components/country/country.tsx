@@ -17,17 +17,32 @@ export default function Country({ country, handleVisitedCountry, handleVisitedFl
         handleVisitedCountry(country);
     }
 
+    const [visitedFlag, setVisitedFalg] = useState<boolean>(false);
+    const handleVisitFlag = () => {
+        setVisitedFalg(!visitedFlag)
+        handleVisitedFlag(country.flags.flags.png)
+    }
+
     return(
         <div className={`country ${visited? 'country-visited' : ''}`}>
             <h3>{country.name.common}</h3>
+
             <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
+
             <h4>Capital: {country.capital.capital}</h4>
+
             <p>Population: {country.population.population}</p>
+
+            <p>Area: {country.area.area}</p>
+
+            <p>Region: {country.region.region}</p>
+
             <button onClick={handleVisit} className={`country ${visited? 'country-visited-btn' : 'country-not-visited'}`}>
                 {visited? "Visited" : "Mark as visited"}
             </button>
+            
             <button
-            onClick={() => handleVisitedFlag(country.flags.flags.png)}
+            onClick={handleVisitFlag} className={`country ${visitedFlag? 'visited-flag-btn': 'flag-btn'}`}
             >Add flag as visited</button>
         </div>
     )
